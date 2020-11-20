@@ -1,0 +1,23 @@
+# DO NO EDIT
+# This file should be automatically configure by scylla_cpuset_setup
+#
+# CPUSET="--cpuset 0 --smp 1"
+CPUSET="--cpuset 1-7,9-15 "
+# DO NOT EDIT
+# This file should be automatically configured by scylla_dev_mode_setup
+#
+# DEV_MODE=--developer-mode=0
+[housekeeping]
+check-version: True
+SEASTAR_IO="--io-properties-file=/etc/scylla.d/io_properties.yaml"
+disks:
+- mountpoint: /var/lib/scylla
+  read_bandwidth: 4030685470
+  read_iops: 822400
+  write_bandwidth: 1617551304
+  write_iops: 363000
+MEM_CONF="--lock-memory=1"
+cpu_mask: '0x0000ffff'
+mode: sq_split
+nic: eth0
+tune:

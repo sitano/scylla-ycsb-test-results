@@ -1,0 +1,19 @@
+[ec2-user@ip-10-0-0-155 ~]$ ./cockroachshort workload init ycsb 'postgresql://root@127.0.0.1:5000?sslmode=disable' --workload A --insert-count 100000000 --drop --field-count 10 --field-length 128
+./cockroachshort: /lib64/libtinfo.so.5: no version information available (required by ./cockroachshort)
+I201205 12:01:51.422501 29 workload/workloadsql/dataload.go:103  elapsed: 359ms, flushed 16000 rows, batch took 336ms
+I201205 12:01:51.556083 118 workload/workloadsql/dataload.go:103  elapsed: 493ms, flushed 17000 rows, batch took 466ms
+I201205 12:01:51.606378 117 workload/workloadsql/dataload.go:103  elapsed: 543ms, flushed 18000 rows, batch took 514ms
+I201205 12:01:51.707445 30 workload/workloadsql/dataload.go:103  elapsed: 644ms, flushed 19000 rows, batch took 618ms
+I201205 12:01:51.824863 120 workload/workloadsql/dataload.go:103  elapsed: 761ms, flushed 20000 rows, batch took 731ms
+I201205 12:01:51.872177 121 workload/workloadsql/dataload.go:103  elapsed: 809ms, flushed 21000 rows, batch took 788ms
+...
+I201205 19:03:11.326384 30 workload/workloadsql/dataload.go:103  elapsed: 7h1m20.263s, flushed 99995000 rows, batch took 1.424s
+I201205 19:03:11.351712 116 workload/workloadsql/dataload.go:103  elapsed: 7h1m20.288s, flushed 99996000 rows, batch took 712ms
+I201205 19:03:12.177916 30 workload/workloadsql/dataload.go:103  elapsed: 7h1m21.115s, flushed 99997000 rows, batch took 846ms
+I201205 19:03:12.686217 116 workload/workloadsql/dataload.go:103  elapsed: 7h1m21.623s, flushed 99998000 rows, batch took 1.327s
+I201205 19:03:12.741267 31 workload/workloadsql/dataload.go:103  elapsed: 7h1m21.678s, flushed 99998000 rows, batch took 1.486s
+I201205 19:03:13.702332 30 workload/workloadsql/dataload.go:103  elapsed: 7h1m22.639s, flushed 99998000 rows, batch took 1.519s
+I201205 19:03:14.113148 30 workload/workloadsql/dataload.go:103  elapsed: 7h1m23.05s, flushed 99999000 rows, batch took 404ms
+I201205 19:03:14.723830 30 workload/workloadsql/dataload.go:103  elapsed: 7h1m23.66s, flushed 100000000 rows, batch took 604ms
+I201205 19:03:14.723906 1 workload/workloadsql/dataload.go:145  imported usertable (7h1m24s, 100000000 rows)
+ec2-user@ip-10-0-0-155:~[ec2-user@ip-10-0-0-155 ~]$

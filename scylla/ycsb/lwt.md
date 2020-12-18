@@ -6,7 +6,7 @@ c5.9xlarge loaders.
 3 machines cluster, 3 replication factor = 3 * 16 = 48 vCPU
 https://github.com/sitano/scylla-cluster-tests/blob/ivan_nostress/test-cases/longevity/longevity-ycsb-a-1B.yaml
 
-$ bin/ycsb run scylla -P workloads/workloada -target 10000 -threads 840 -p recordcount=1000000000 -p fieldcount=10 -p fieldlength=128 -p operationcount=10000000 -p scylla.coreconnections=280 -p scylla.maxconnections=280 -p scylla.username=cassandra -p scylla.password=cassandra -p scylla.tokenaware=true -p scylla.lwt=true -p hosts=10.0.2.246,10.0.2.17,10.0.2.197
+    $ bin/ycsb run scylla -P workloads/workloada -target 10000 -threads 840 -p recordcount=1000000000 -p fieldcount=10 -p fieldlength=128 -p operationcount=10000000 -p scylla.coreconnections=280 -p scylla.maxconnections=280 -p scylla.username=cassandra -p scylla.password=cassandra -p scylla.tokenaware=true -p scylla.lwt=true -p scylla.hosts=10.0.2.246,10.0.2.17,10.0.2.197
 
 3.10.1-scylla-0 (no LWT optimization)
 
@@ -56,7 +56,7 @@ $ bin/ycsb run scylla -P workloads/workloada -target 10000 -threads 840 -p recor
     [READ-FAILED], 95thPercentileLatency(us), 2038783
     [READ-FAILED], 99thPercentileLatency(us), 3729407
 
-$ bin/ycsb run scylla -P workloads/workloada -target 5000 -threads 840 -p recordcount=1000000000 -p fieldcount=10 -p fieldlength=128 -p operationcount=1000000 -p scylla.coreconnections=280 -p scylla.maxconnections=280 -p scylla.username=cassandra -p scylla.password=cassandra -p scylla.tokenaware=true -p scylla.lwt=true -p hosts=10.0.2.246,10.0.2.17,10.0.2.197
+    $ bin/ycsb run scylla -P workloads/workloada -target 5000 -threads 840 -p recordcount=1000000000 -p fieldcount=10 -p fieldlength=128 -p operationcount=1000000 -p scylla.coreconnections=280 -p scylla.maxconnections=280 -p scylla.username=cassandra -p scylla.password=cassandra -p scylla.tokenaware=true -p scylla.lwt=true -p scylla.hosts=10.0.2.246,10.0.2.17,10.0.2.197
 
 3.10.1-scylla-0 (no LWT optimization)
 

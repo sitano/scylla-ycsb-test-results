@@ -8,7 +8,9 @@ https://github.com/sitano/scylla-cluster-tests/blob/ivan_nostress/test-cases/lon
 
 Scylla took 20 minutes to load 100M keys with Original YCSB benchmark Cassandra binding.
 
-$ bin/ycsb load cassandra-cql -P workloads/workloada -threads 84 -p recordcount=100000000 -p readproportion=0 -p updateproportion=0 -p fieldcount=10 -p fieldlength=128 -p insertstart=0 -p insertcount=100000000 -p cassandra.coreconnections=14 -p cassandra.maxconnections=14 -p cassandra.username=cassandra -p cassandra.password=cassandra -s  -p hosts=10.0.0.171,10.0.0.142,10.0.1.8 -p cassandra.readconsistencylevel=QUORUM -p cassandra.writeconsistencylevel=QUORUM -p maxexecutiontime=29400
+    $ bin/ycsb load cassandra-cql -P workloads/workloada -threads 84 -p recordcount=100000000 -p readproportion=0 -p updateproportion=0 -p fieldcount=10 -p fieldlength=128 -p insertstart=0 -p insertcount=100000000 -p cassandra.coreconnections=14 -p cassandra.maxconnections=14 -p cassandra.username=cassandra -p cassandra.password=cassandra -s  -p hosts=10.0.0.171,10.0.0.142,10.0.1.8 -p cassandra.readconsistencylevel=QUORUM -p cassandra.writeconsistencylevel=QUORUM
 
 DATABASE SIZE 300 GiB - 100 GiB a node
 TABLE 1
+
+20 minutes.
